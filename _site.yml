@@ -1,12 +1,10 @@
 name: "website"
 title: "Kilel Joyce"
 description: |
-  Kilel Joyce
+  STA 631 R Portfolio
 output_dir: "_site"
 navbar:
   right:
-    - text: "Home"
-      href: index.html
     - text: "About"
-      href: about.html
+      href: index.html
 output: distill::distill_article
