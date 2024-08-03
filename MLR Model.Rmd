@@ -1,0 +1,21 @@
+---
+title: "MLR Model"
+author: "Kilel Joyce"
+date: "2024-08-03"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Analyzing Historical Vote Trends in U.S. Presidential Elections
+
+## Project Overview
+
+I chose state-level presidential election data to examine historical vote trends across multiple states. This strategic method allows us to identify shifts in voter preferences and the overall political situation of each location. By studying previous election results, we can identify the elements that influenced electoral outcomes and better understand each state's distinctive political scene. This thorough investigation allows us to forecast changes in voter behavior and evaluate the historical impact of political parties across different states. With this historical perspective, we are better equipped to make educated predictions and strategies for upcoming elections.
+
+Data Source
+Data: MIT Election Data and Science Lab, 2017 and United States Census website
+
+
