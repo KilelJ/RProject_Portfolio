@@ -1,0 +1,21 @@
+{
+  "articles": [
+    {
+      "path": "about.html",
+      "title": "About this site",
+      "description": "Some additional details about the website",
+      "author": [],
+      "contents": "\n\n\n\n",
+      "last_modified": "2024-08-02T16:29:53-04:00"
+    },
+    {
+      "path": "index.html",
+      "title": "Kilel Joyce",
+      "description": "Welcome to the website. I hope you enjoy it!\n",
+      "author": [],
+      "contents": "\n\n\n\n",
+      "last_modified": "2024-08-02T16:29:54-04:00"
+    }
+  ],
+  "collections": []
+}
