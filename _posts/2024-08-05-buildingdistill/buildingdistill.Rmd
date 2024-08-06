@@ -5,6 +5,7 @@ description: |
 author:
   - name: Kilel Joyce
 date: 2024-08-05
+preview: kilel.png
 output:
   distill::distill_article:
     self_contained: false

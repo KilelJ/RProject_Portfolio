@@ -6,7 +6,7 @@
       "description": "Some additional details about the website",
       "author": [],
       "contents": "\n\n\n\n",
-      "last_modified": "2024-08-05T20:31:31-04:00"
+      "last_modified": "2024-08-05T23:16:37-04:00"
     },
     {
       "path": "index.html",
@@ -14,13 +14,13 @@
       "description": "Welcome to my website\n",
       "author": [],
       "contents": "\n{width = 100}\nAbout Me:\nResume\n\n\n\n",
-      "last_modified": "2024-08-05T20:31:31-04:00"
+      "last_modified": "2024-08-05T23:16:37-04:00"
     },
     {
       "path": "reflections.html",
       "author": [],
       "contents": "\ntitle: “reflections”\nlisting: posts\n\n\n\n",
-      "last_modified": "2024-08-05T20:31:32-04:00"
+      "last_modified": "2024-08-05T23:16:39-04:00"
     }
   ],
   "collections": ["posts/posts.json"]
