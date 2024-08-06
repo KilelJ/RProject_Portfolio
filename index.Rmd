@@ -1,15 +1,18 @@
 ---
 title: "Kilel Joyce"
 description: |
-  Welcome to the website. I hope you enjoy it!
+  Welcome to my website
 site: distill::distill_website
 ---
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE)
 
-# Learn more about creating websites with Distill at:
-# https://rstudio.github.io/distill/website.html
 
 ```
 
+![](Joyce.kilel.jpg){width = 100}
+
+## About Me:
+
+## Resume

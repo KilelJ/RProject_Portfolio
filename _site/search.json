@@ -6,16 +6,22 @@
       "description": "Some additional details about the website",
       "author": [],
       "contents": "\n\n\n\n",
-      "last_modified": "2024-08-03T09:17:32-04:00"
+      "last_modified": "2024-08-05T20:31:31-04:00"
     },
     {
       "path": "index.html",
       "title": "Kilel Joyce",
-      "description": "Welcome to the website. I hope you enjoy it!\n",
+      "description": "Welcome to my website\n",
       "author": [],
-      "contents": "\n\n\n\n",
-      "last_modified": "2024-08-03T09:17:33-04:00"
+      "contents": "\n{width = 100}\nAbout Me:\nResume\n\n\n\n",
+      "last_modified": "2024-08-05T20:31:31-04:00"
+    },
+    {
+      "path": "reflections.html",
+      "author": [],
+      "contents": "\ntitle: “reflections”\nlisting: posts\n\n\n\n",
+      "last_modified": "2024-08-05T20:31:32-04:00"
     }
   ],
-  "collections": []
+  "collections": ["posts/posts.json"]
 }

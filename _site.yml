@@ -7,4 +7,6 @@ navbar:
   right:
     - text: "About"
       href: index.html
+    - text: "reflections"
+      href: reflections.html
 output: distill::distill_article
