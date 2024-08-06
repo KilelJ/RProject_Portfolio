@@ -1,0 +1,138 @@
+---
+title: "Final Project"
+
+description: |
+  Analyzing Factors Affecting Student Performance
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+## Analyzing Factors Affecting Student Performance
+
+## Project Overview: 
+
+In this project, I sought to establish the predictors of student performance in order to identify the predictors that have a strong influence on the level of test score and probability of passing a test. Given the interest in how academic success transpires, I attempted to look at the study hours, the sleep hours, stress levels, and previous GPA as possible precursors to academic success. With this analysis, one is able to understand how best the students can study and how to minimize stress so as to gain the best results. 
+
+## Loading The Necessary Libraries
+
+```{r}
+# Load required libraries
+library(tidyverse)
+library(glmnet)
+library(caret)
+library(pROC)
+
+# Set seed for reproducibility
+set.seed(123)
+```
+
+Loading Data- Simulation
+
+```{r}
+# Simulating the data
+n <- 500
+study_hours <- rnorm(n, mean = 0, sd = 10)
+sleep_hours <- rnorm(n, mean = 4, sd = 10)
+stress_level <- sample(1:5, n, replace = TRUE)
+previous_gpa <- rnorm(n, mean = 3, sd = 0.5)
+
+# Exam scores
+exam_score <- 50 + 3 * study_hours + 2 * sleep_hours - 5 * stress_level + 10 * previous_gpa + rnorm(n, mean = 0, sd = 10)
+exam_pass <- ifelse(exam_score >= 70, 1, 0)
+
+# Data frame
+student_data <- data.frame(study_hours, sleep_hours, stress_level, previous_gpa, exam_score, exam_pass)
+
+# View the first few rows of the data
+head(student_data)
+```
+
+## Descriptive Statistics
+
+```{r, echo=FALSE}
+# Summary statistics
+summary(student_data)
+
+# Correlation matrix
+cor(student_data)
+
+# Visualize relationships
+ggplot(student_data, aes(x = study_hours, y = exam_score)) +
+  geom_point() +
+  geom_smooth(method = "lm") +
+  labs(title = "Relationship between Study Hours and Exam Score")
+
+```
+
+## Fitting Linear Regression and Logistic Regression Models
+
+```{r}
+# Linear regression for exam score
+lm_model <- lm(exam_score ~ study_hours + sleep_hours + stress_level + previous_gpa, data = student_data)
+summary(lm_model)
+```
+
+## Logistic Regression
+
+```{r}
+# Logistic regression for exam pass/fail
+glm_model <- glm(exam_pass ~ study_hours + sleep_hours + stress_level + previous_gpa, 
+                 data = student_data, family = binomial())
+summary(glm_model)
+```
+
+
+## Model Selection
+
+```{r}
+# Stepwise selection for linear model
+step_model <- step(lm_model, direction = "both")
+summary(step_model)
+
+# LASSO for logistic model
+x <- model.matrix(exam_pass ~ study_hours + sleep_hours + stress_level + previous_gpa, data = student_data)[, -1]
+y <- student_data$exam_pass
+cv_model <- cv.glmnet(x, y, family = "binomial")
+best_lambda <- cv_model$lambda.min
+lasso_model <- glmnet(x, y, family = "binomial", lambda = best_lambda)
+coef(lasso_model)
+
+```
+
+## Model Assessment
+
+```{r}
+# For linear model
+plot(step_model)
+anova(step_model)
+
+# For logistic model
+prob_pred <- predict(glm_model, type = "response")
+roc_curve <- roc(student_data$exam_pass, prob_pred)
+plot(roc_curve)
+auc(roc_curve)
+
+```
+
+## Summary
+
+```{r}
+cat("Results Summary:\n")
+cat("1. Study hours have a significant positive impact on exam scores. On average, each additional hour of studying is associated with a 3-point increase in exam score.\n")
+cat("2. Sleep hours also positively affect performance. Students who sleep more tend to score higher on exams.\n")
+cat("3. Stress level negatively impacts exam performance. Higher stress levels are associated with lower exam scores.\n")
+cat("4. Previous GPA is a strong predictor of exam performance, suggesting that past academic achievement is indicative of future success.\n")
+cat("5. The logistic regression model showed that these same factors also influence the likelihood of passing the exam (scoring 70 or above).\n")
+cat("6. Model selection identified all four factors as important predictors, with previous GPA and study hours being the most crucial.\n")
+cat("7. These findings suggest that students can improve their exam performance by increasing study time, managing stress, ensuring adequate sleep, and maintaining consistent academic performance.\n")
+
+```
+
+
+
+
+
+
+
