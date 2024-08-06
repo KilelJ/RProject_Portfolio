@@ -9,6 +9,8 @@ navbar:
   right:
     - text: "About"
       href: index.html
+    - text: "Final Project"
+      href: FinalProject.html
     - text: "Reflections"
       href: reflections.html
     - icon: fa fa-github

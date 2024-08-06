@@ -83,7 +83,6 @@ glm_model <- glm(exam_pass ~ study_hours + sleep_hours + stress_level + previous
 summary(glm_model)
 ```
 
-
 ## Model Selection
 
 ```{r}

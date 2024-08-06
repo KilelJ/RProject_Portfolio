@@ -88,26 +88,29 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 
 
   <!--radix_placeholder_meta_tags-->
-  <title>Kilel Joyce: Untitled</title>
+  <title>Kilel Joyce: Reflections</title>
 
+  <meta property="description" itemprop="description" content="Reflections on the course-related learning and participation"/>
 
 
 
   <!--  https://developers.facebook.com/docs/sharing/webmasters#markup -->
-  <meta property="og:title" content="Kilel Joyce: Untitled"/>
+  <meta property="og:title" content="Kilel Joyce: Reflections"/>
   <meta property="og:type" content="article"/>
+  <meta property="og:description" content="Reflections on the course-related learning and participation"/>
   <meta property="og:locale" content="en_US"/>
   <meta property="og:site_name" content="Kilel Joyce"/>
 
   <!--  https://dev.twitter.com/cards/types/summary -->
   <meta property="twitter:card" content="summary"/>
-  <meta property="twitter:title" content="Kilel Joyce: Untitled"/>
+  <meta property="twitter:title" content="Kilel Joyce: Reflections"/>
+  <meta property="twitter:description" content="Reflections on the course-related learning and participation"/>
 
   <!--/radix_placeholder_meta_tags-->
   <!--radix_placeholder_rmarkdown_metadata-->
 
   <script type="text/json" id="radix-rmarkdown-metadata">
-  {"type":"list","attributes":{},"value":[]}
+  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description"]}},"value":[{"type":"character","attributes":{},"value":["Reflections"]},{"type":"character","attributes":{},"value":["Reflections on the course-related learning and participation"]}]}
   </script>
   <!--/radix_placeholder_rmarkdown_metadata-->
   <!--radix_placeholder_navigation_in_header-->
@@ -2116,7 +2119,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <!--radix_placeholder_front_matter-->
 
 <script id="distill-front-matter" type="text/json">
-{"title":"Untitled","authors":[]}
+{"title":"Reflections","description":"Reflections on the course-related learning and participation","authors":[]}
 </script>
 
 <!--/radix_placeholder_front_matter-->
@@ -2132,6 +2135,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 </div>
 <div class="nav-right">
 <a href="index.html">About</a>
+<a href="FinalProject.html">Final Project</a>
 <a href="reflections.html">Reflections</a>
 <a href="https://github.com/KilelJ">
 <i class="fa fa-github" aria-hidden="true"></i>
@@ -2148,18 +2152,34 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <!--/radix_placeholder_site_before_body-->
 
 <div class="d-title">
-<h1>reflections.knit</h1>
+<h1>Reflections</h1>
 
 <!--radix_placeholder_categories-->
 <!--/radix_placeholder_categories-->
-
+<p><p>Reflections on the course-related learning and participation</p></p>
 </div>
 
 
 <div class="d-article">
-<hr />
-<p>title: “reflections”
-listing: posts</p>
+<p>In this project, I conducted an assessment of the independent variables that have the potential of affecting the dependent variables which include the general test performance as well as the pass rate of the student. With the help of different statistical models and writing R programs, I analyzed the impact that study hours, sleep hours, stress levels, and previous GPA have on academic success.</p>
+<h2 id="course-learning-objectives">Course Learning Objectives</h2>
+<h3 id="describe-probability-as-a-foundation-of-statistical-modeling-including-inference-and-maximum-likelihood-estimation">1. Describe probability as a foundation of statistical modeling, including inference and maximum likelihood estimation</h3>
+<p>In my project, I applied the binary logistic regression whereby I hoped to show the likelihood of the students passing the examination and this depended on study hours, sleep hours, stress levels, and previous grade point average.</p>
+<p>The application of a logistic regression model is useful for further explaining how the probability concepts underlie the framework of statistical modeling. The maximum likelihood estimation enabled me to identify the model most appropriate to estimate the probability to pass the exam, an aspect that proved that probability informs inference and decision making while conducting statistics.</p>
+<h3 id="determine-and-apply-the-appropriate-generalized-linear-model-for-a-specific-data-context">2. Determine and apply the appropriate generalized linear model for a specific data context</h3>
+<p>In the given analysis I have employed both the linear regression and logistic regression techniques. I used a linear model for fixed effects and for the continuous outcome variable of examination scores while using a logistic model for the categorical dependent variable, pass/fail in the examination.</p>
+<p>In case of the continuous outcome, I applied the linear regression analysis to determine the relationship between the study hours, sleep hours, and stress level/previous GPA with the exam scores. For the binary outcome, I used Logistic regression to predict the probability of passing. This proved my competency on how to choose and use the right generalized linear model according to the density of the data and the research questions.</p>
+<h3 id="conduct-model-selection-for-a-set-of-candidate-models">3. Conduct model selection for a set of candidate models</h3>
+<p>Here, model selection was done through stepwise selection for regression based on linearity and LASSO regression for logistic regression model.</p>
+<p>Backward elimination also known as backward step-wise method involved in elimination of insignificant variables from the model with the help of certain statistical measures. For the logistic model, LASSO was employed to determine the best number of predictors that can be used while at the same time avoiding over-fitting. This process also demonstrated that I can select and choose the best model from two or more models.</p>
+<h3 id="communicate-the-results-of-statistical-models-to-a-general-audience">4. Communicate the results of statistical models to a general audience</h3>
+<p>I ensured that I gave a straightforward and concise analysis of my results at the end of my work.</p>
+<p>The summary has provided clear descriptions and elaboration of the relationship between each predictor and the exam performance like the study hours and previous GPA which were given as positive and the stress which was given as negative. Such clear communication made the results easily understandable by anyone in the population as well as exercising corporate understanding on those findings.</p>
+<h3 id="use-programming-software">5. Use programming software</h3>
+<p>I used R in data simulation, fitting the models, as well as evaluation.</p>
+<p>Detailed work-wise, R was very useful in processes such as fitting logistic regression; selection of models using LASSO and performance analysis by ROC curves. This is evident through my ability to adequately use the programming software for statistical modeling and analysis and that stresses my prowess in the use of R on the job.</p>
+<h2 id="contribution-to-course-community">Contribution to Course Community</h2>
+<p>I actively attended class, discussed with other students about the projects and coursework, and critiqued their work. My participation improved my understanding and benefited the course group by promoting teamwork and assisting fellow students.</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
 <!--radix_placeholder_article_footer-->
 <!--/radix_placeholder_article_footer-->
